@@ -33,11 +33,17 @@ cd $blddir
 # that podman can then build
 s2i build . "$@" --as-dockerfile $docker
 
+# 'upload/src' appears to be not created in all circumstances,
+# so I'll make sure it is here:
+mkdir -p upload/src
 # the resulting dockerfile expects all src to be staged
 # under directory 'upload/src' in the build dir
-mkdir -p upload/src
-cp -r ${srcdir}/* upload/src/
+rm -rf upload/src
+cp -r ${srcdir} upload/src
+
+# now that source is staged, we can build with the dockerfile
 podman build -t $buildtag -f $docker .
 
+# clean up working files
 cd $origdir
 rm -rf $blddir $docker
