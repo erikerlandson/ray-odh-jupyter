@@ -1,4 +1,4 @@
-ray @ https://s3-us-west-2.amazonaws.com/ray-wheels/latest/ray-2.0.0.dev0-cp36-cp36m-manylinux2014_x86_64.whl
+ray @ https://ray-wheels.s3-us-west-2.amazonaws.com/master/4357055305395ea309813851a539381bc7c32138/ray-2.0.0.dev0-cp36-cp36m-manylinux2014_x86_64.whl
 cython==0.29.0
 flatbuffers
 dataclasses; python_version < '3.7'
