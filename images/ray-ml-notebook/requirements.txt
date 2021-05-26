@@ -2,6 +2,9 @@ tensorflow==2.4.1
 horovod[ray]==0.21.3
 keras==2.4.3
 scikit-learn==0.24.1
-dask==2021.2.0
+dask[array,dataframe]==2021.2.0
+toolz==0.11.1
 pandas==1.1.5
 scipy==1.5.4
+xgboost==1.4.2
+xgboost-ray==0.1.0
